@@ -63,5 +63,12 @@ I use a feature pattern.
 Technologies
 ===
 [react-slignshot](https://github.com/coryhouse/react-slingshot) Starter kit for projects in react fully of good practices.
+[glamor]()
+[react-motion]()
+[redux-api-middleware]()
+[reselect]()
+[immutability-helper]()
+[bootstrap4]()
+[fontAwesome]()
 
 

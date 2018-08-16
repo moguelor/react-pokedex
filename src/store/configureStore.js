@@ -4,6 +4,7 @@ import thunk from 'redux-thunk';
 import createHistory from 'history/createBrowserHistory';
 // 'routerMiddleware': the new way of storing route changes with redux middleware since rrV4.
 import { routerMiddleware } from 'react-router-redux';
+import { apiMiddleware } from 'redux-api-middleware';
 import rootReducer from '../pages/main/reducer';
 export const history = createHistory();
 function configureStoreProd(initialState) {
@@ -14,6 +15,7 @@ function configureStoreProd(initialState) {
     // thunk middleware can also accept an extra argument to be passed to each thunk action
     // https://github.com/reduxjs/redux-thunk#injecting-a-custom-argument
     thunk,
+    apiMiddleware,
     reactRouterMiddleware,
   ];
 
@@ -34,6 +36,7 @@ function configureStoreDev(initialState) {
     // thunk middleware can also accept an extra argument to be passed to each thunk action
     // https://github.com/reduxjs/redux-thunk#injecting-a-custom-argument
     thunk,
+    apiMiddleware,
     reactRouterMiddleware,
   ];
 
