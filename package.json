@@ -30,6 +30,8 @@
   "author": "Cory House",
   "license": "MIT",
   "dependencies": {
+    "glamor": "^2.20.40",
+    "immutability-helper": "^2.7.1",
     "object-assign": "4.1.1",
     "react": "16.4.2",
     "react-dom": "16.4.2",
@@ -37,7 +39,9 @@
     "react-router-dom": "4.3.1",
     "react-router-redux": "5.0.0-alpha.6",
     "redux": "4.0.0",
-    "redux-thunk": "2.3.0"
+    "redux-api-middleware": "^2.3.0",
+    "redux-thunk": "2.3.0",
+    "reselect": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "9.1.0",
