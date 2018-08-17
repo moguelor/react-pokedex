@@ -42,7 +42,7 @@ const styles = {
 
 PokemonInfo.propTypes = {
     /** Pokemon data */
-    pokemon : PropTypes.array.isRequired,
+    pokemon : PropTypes.object.isRequired,
 }
 
 export default PokemonInfo

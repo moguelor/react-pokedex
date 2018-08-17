@@ -5,13 +5,17 @@ import { Loading } from '../../../common/components'
 import PokemonList from './PokemonList'
 import TopBar from './TopBar'
 
-const Sidebar = ({ pokemons, isFetching }) => (
+const Sidebar = ({ pokemons, isFetching, redirectToPokemon, activePokemonId}) => (
     <div className={styles.container}>
         <TopBar />
         {
             isFetching
                 ? <Loading />
-                : <PokemonList pokemons={pokemons} />
+                : <PokemonList 
+                    pokemons={pokemons} 
+                    redirectToPokemon={redirectToPokemon}
+                    activePokemonId = {activePokemonId}
+                />
         }
     </div>
 )
@@ -38,7 +42,13 @@ Sidebar.propTypes = {
     pokemons: PropTypes.array.isRequired,
 
     /** Flag to indicate fetching data */
-    isFetching: PropTypes.bool.isRequired
+    isFetching: PropTypes.bool.isRequired,
+
+    /** Function to redirect page */
+    redirectToPokemon : PropTypes.func,
+
+    /** Active pokemon id */
+    activePokemonId : PropTypes.number
 }
 
 export default Sidebar;

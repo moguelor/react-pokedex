@@ -2,12 +2,11 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { ConnectedRouter } from 'react-router-redux'
 import { Provider } from 'react-redux'
-
 import { Route, Switch } from "react-router-dom"
 import { hot } from "react-hot-loader"
-import { NotFoundPage } from './components';
-import sidebarList from '../sidebarList';
-import details from '../details';
+import { NotFoundPage } from './components'
+import sidebarList from '../sidebarList'
+import details from '../details'
 
 class Container extends Component {
     render() {
@@ -22,7 +21,7 @@ class Container extends Component {
                         <div className="col-md-8 col-sm-6 col-12">
                             <Switch>
                                 <Route exact path="/" component={details.Container} />
-                                <Route exact path="/:id" component={details.Container} />
+                                <Route path="/:id" component={details.Container} />
                                 <Route component={NotFoundPage} />
                             </Switch>
                         </div>

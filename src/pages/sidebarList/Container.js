@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
 import { Sidebar } from './components'
-import * as actions from './actions';
-import * as selectors from './selectors';
+import details from '../details';
+import * as actions from './actions'
+import * as selectors from './selectors'
 
 class Container extends Component {
 
@@ -15,12 +16,14 @@ class Container extends Component {
 
     render() {
 
-        const { pokemons, isFetching } = this.props;
+        const { pokemons, isFetching, redirectToPokemon, activePokemonId } = this.props;
 
         return (
             <Sidebar
                 pokemons={pokemons}
-                isFetching={isFetching}
+                isFetching= {isFetching}
+                redirectToPokemon= {redirectToPokemon}
+                activePokemonId = {activePokemonId}
             />
         )
     }
@@ -29,12 +32,14 @@ class Container extends Component {
 
 const mapStateToProps = createStructuredSelector({
     pokemons: selectors.getPokemons,
-    isFetching: selectors.getIsFetching
+    isFetching: selectors.getIsFetching,
+    activePokemonId : details.selectors.getActivePokemonId
 });
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        fetchPokemons: () => dispatch(actions.fetchPokemons())
+        fetchPokemons: () => dispatch(actions.fetchPokemons()),
+        redirectToPokemon : (id) => dispatch(actions.redirectToPokemon(id))
     };
 };
 
@@ -44,10 +49,16 @@ Container.propTypes = {
     fetchPokemons: PropTypes.func.isRequired,
 
     /** List of pokemons */
-    pokemons: PropTypes.array.isRequired,
+    pokemons: PropTypes.array,
 
     /** Is fetching the list */
-    isFetching: PropTypes.bool.isRequired
+    isFetching: PropTypes.bool.isRequired,
+
+    /** Function to redirect page */
+    redirectToPokemon : PropTypes.func,
+
+    /** Active pokemon */
+    activePokemonId: PropTypes.number
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Container);

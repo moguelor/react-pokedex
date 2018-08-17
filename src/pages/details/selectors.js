@@ -19,3 +19,8 @@ export const getErrors = createSelector(
     getModel,
     (model) => model.errors
 );
+
+export const getActivePokemonId = createSelector(
+    getModel,
+    (model) => model.active_pokemon_id
+);

@@ -4,7 +4,7 @@ import sidebarList from '../sidebarList'
 import details from '../details'
 
 const rootReducer = combineReducers({
-  routing: routerReducer,
+  router: routerReducer,
   [sidebarList.NAME] : sidebarList.reducer,
   [details.NAME] : details.reducer,
 });
