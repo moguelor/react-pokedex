@@ -7,6 +7,7 @@ import { Route, Switch } from "react-router-dom"
 import { hot } from "react-hot-loader"
 import { NotFoundPage } from './components';
 import sidebarList from '../sidebarList';
+import details from '../details';
 
 class Container extends Component {
     render() {
@@ -18,9 +19,10 @@ class Container extends Component {
                         <div className="col-3">
                             <sidebarList.Container />
                         </div>
-                        <div className="col-8">
+                        <div className="col-9">
                             <Switch>
-                                <Route exact path="/" component={() => (<div>hola Yellowme</div>)} />
+                                <Route exact path="/" component={details.Container} />
+                                <Route exact path="/:id" component={details.Container} />
                                 <Route component={NotFoundPage} />
                             </Switch>
                         </div>
