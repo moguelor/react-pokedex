@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { css } from 'glamor'
 
-const PokemonListItem = ({ number, name }) => (
-    <div className={`row justify-content-md-center ${styles.item} `}>
+const PokemonListItem = ({ number, name, handleClickItem, activeItem }) => (
+    <div className={`row justify-content-md-center ${css(styles.item,  activeItem && styles.activeItem)}`} onClick={handleClickItem}>
         <div className="col-2 text-right">
             <span>{number}</span>
         </div>
@@ -23,6 +23,9 @@ const styles = {
         '& span': {
             color: "#797979"
         }
+    }),
+    activeItem : css({
+        backgroundColor: "#3F3939"
     })
 }
 
@@ -31,7 +34,13 @@ PokemonListItem.propTypes = {
     number : PropTypes.number.isRequired,
 
     /** Name of pokemon */
-    name : PropTypes.string.isRequired
+    name : PropTypes.string.isRequired,
+
+    /** Handle click to redirect pokemon */
+    handleClickItem : PropTypes.func,
+
+    /** If is active the item list */
+    activeItem : PropTypes.bool,
 }
 
 export default PokemonListItem;

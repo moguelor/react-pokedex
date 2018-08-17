@@ -82,7 +82,7 @@ Container.propTypes = {
     fetchPokemon: PropTypes.func.isRequired,
 
     /** List of pokemons */
-    pokemon: PropTypes.object.isRequired,
+    pokemon: PropTypes.object,
 
     /** Is fetching the list */
     isFetching: PropTypes.bool.isRequired,
