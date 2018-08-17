@@ -5,8 +5,8 @@ import ListType from './ListType'
 
 const PokemonInfo = ({pokemon : {id, name, image, types }}) => (
     <div className={`row justify-content-md-center text-center`}>
-        <div className={`col-5 ${styles.containerImage}`}>
-            <img src={image} />
+        <div className={`col-12 ${styles.containerImage}`}>
+            <img src={image} className="img-fluid" />
         </div>
         <div className="col-12">
            <ListType 
@@ -33,6 +33,10 @@ const styles = {
         color: "#C5C5C5",
         fontSize: 24,
         fontWeight: 700
+    }),
+    namePokemon : css({
+        fontSize: 36,
+        fontWeight : 700
     })
 }
 

@@ -3,13 +3,14 @@ import PropTypes from 'prop-types'
 import { css } from 'glamor'
 
 const TypeItem = ({ name }) => (
-    <div className={`col-2 ${styles.type}`}>{name.toUpperCase()}</div>
+    <div className={`col-6`}>
+        <div className={`${styles.type}`}> {name.toUpperCase()} </div>
+    </div>
 )
 
 const styles = {
     type: css({
         backgroundColor: "#F3DD5F",
-        marginRight: 5,
         borderRadius: 3,
         fontWeight: 700,
         padding: 5,

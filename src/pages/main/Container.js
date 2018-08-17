@@ -16,10 +16,10 @@ class Container extends Component {
             <Provider store={store}>
                 <ConnectedRouter history={history}>
                     <div className="row">
-                        <div className="col-3">
+                        <div className="col-md-4 col-sm-6">
                             <sidebarList.Container />
                         </div>
-                        <div className="col-9">
+                        <div className="col-md-8 col-sm-6 col-12">
                             <Switch>
                                 <Route exact path="/" component={details.Container} />
                                 <Route exact path="/:id" component={details.Container} />

@@ -39,13 +39,13 @@ class Container extends Component {
 
         return (
             <div className={`row ${styles.container}`}>
-                <div className="col-6">
+                <div className="col-md-6 col-sm-12 col-12 text-center">
                    <PokemonInfo pokemon = {pokemon}/>
                 </div>
-                <div className="col-6">
+                <div className="col text-center">
                     Some details
                 </div>
-                <div className="col text-center">
+                <div className="col-12 text-center">
                     Other details
                 </div>
             </div>

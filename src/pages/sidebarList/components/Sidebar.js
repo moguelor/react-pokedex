@@ -24,10 +24,10 @@ const styles = {
         overflow: "scroll",
         position: 'relative',
         '@media(max-width: 768px)': {
-            position: 'fixed',
-            width: "60%",
+            width: "100%"
         },
         '@media(max-width: 576px)': {
+            position: "fixed",
             width: "80%",
         }
     })
