@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux'
-import { Sidebar } from './components'
 import { createStructuredSelector } from 'reselect'
+import { Sidebar } from './components'
 import * as actions from './actions';
 import * as selectors from './selectors';
 

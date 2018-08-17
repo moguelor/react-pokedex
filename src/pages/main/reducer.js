@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux'
 import { routerReducer } from 'react-router-redux'
 import sidebarList from '../sidebarList'
+import details from '../details'
 
 const rootReducer = combineReducers({
   routing: routerReducer,
-  [sidebarList.NAME] : sidebarList.reducer
+  [sidebarList.NAME] : sidebarList.reducer,
+  [details.NAME] : details.reducer,
 });
 
 export default rootReducer;
