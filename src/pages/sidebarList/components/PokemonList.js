@@ -35,7 +35,7 @@ PokemonList.propTypes = {
     redirectToPokemon : PropTypes.func,
 
     /** Active pokemon id */
-    activePokemonId : PropTypes.number
+    activePokemonId : PropTypes.string
 }
 
 export default PokemonList;

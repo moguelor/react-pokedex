@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
 import { PokemonInfo } from './components'
 import { Loading } from '../../common/components'
+import sidebarList from '../sidebarList'
 import * as actions from './actions'
 import * as selectors from './selectors'
 
@@ -21,10 +22,15 @@ class Container extends Component {
 
 
     render() {
-        const { pokemon, isFetching } = this.props;
+        const { pokemon, isFetching, handleClickOpenSidebar } = this.props;
 
         if (isFetching) {
-            return <Loading />
+            return <div className={`row align-items-center ${styles.container}`}>
+                <div className={`text-center col`}>
+                    <Loading />
+                </div>
+            </div>
+
         }
 
         if (!pokemon) {
@@ -39,8 +45,11 @@ class Container extends Component {
 
         return (
             <div className={`row ${styles.container} align-items-center`}>
+                <div className="col-12">
+                    <span className={`${styles.buttonPanel} fa fa-bars`} onClick={handleClickOpenSidebar} />
+                </div>
                 <div className="col-md-6 col-sm-12 col-12 text-center">
-                   <PokemonInfo pokemon = {pokemon}/>
+                    <PokemonInfo pokemon={pokemon} />
                 </div>
                 <div className="col text-center ">
                     Some details
@@ -56,13 +65,24 @@ class Container extends Component {
 const styles = {
     container: css({
         padding: 30,
-        height: "100vh"
+        height: "100vh",
+        '@media(max-width: 576px)': {
+            paddingTop: 0,
+        }
     }),
     labelChoose: css({
         fontSize: 72,
         color: "#EFEFEF",
         fontWeight: 500
     }),
+    buttonPanel: css({
+        fontSize: 24,
+        color: "#565252",
+        display: "none",
+        '@media(max-width: 576px)': {
+            display: "block"
+        }
+    })
 }
 
 const mapStateToProps = createStructuredSelector({
@@ -72,7 +92,8 @@ const mapStateToProps = createStructuredSelector({
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        fetchPokemon: (id) => dispatch(actions.fetchPokemon(id))
+        fetchPokemon: (id) => dispatch(actions.fetchPokemon(id)),
+        handleClickOpenSidebar: () => dispatch(sidebarList.actions.openPanel())
     };
 };
 
@@ -88,7 +109,10 @@ Container.propTypes = {
     isFetching: PropTypes.bool.isRequired,
 
     /** Info data url */
-    match: PropTypes.object
+    match: PropTypes.object,
+
+    /** Action to open sidebar */
+    handleClickOpenSidebar: PropTypes.func
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Container);

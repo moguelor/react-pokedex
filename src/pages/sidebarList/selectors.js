@@ -19,3 +19,9 @@ export const getErrors = createSelector(
     getModel,
     (model) => model.errors
 );
+
+export const getIsOpen = createSelector(
+    getModel,
+    (model) => model.is_open
+);
+
