@@ -1,5 +1,8 @@
 import { CALL_API } from 'redux-api-middleware'
-import { FETCH_POKEMONS, FETCH_POKEMONS_SUCCESS, FETCH_POKEMONS_FAILURE, SET_ACTIVE_POKEMON_ID } from './actionTypes'
+import { 
+    FETCH_POKEMONS, FETCH_POKEMONS_SUCCESS, FETCH_POKEMONS_FAILURE,
+    OPEN_PANEL, CLOSE_PANEL
+} from './actionTypes'
 import {push} from 'react-router-redux'
 import details from '../details'
 
@@ -25,6 +28,19 @@ export function fetchPokemons(){
 export function redirectToPokemon(id){
     return (dispatch) => {
         dispatch(push(`/${id}`))
+        dispatch(closePanel())
         dispatch(details.actions.fetchPokemon(id))
+    }
+}
+
+export function openPanel(){
+    return {
+        type : OPEN_PANEL
+    }
+}
+
+export function closePanel(){
+    return {
+        type : CLOSE_PANEL
     }
 }

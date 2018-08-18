@@ -8,7 +8,7 @@ const INITIAL_STATE = {
     pokemon : null,
     is_fetching : false,
     errors : [],
-    active_pokemon_id : null
+    active_pokemon_id : ''
 };
 
 export default function(state = INITIAL_STATE, action){

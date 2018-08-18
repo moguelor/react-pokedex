@@ -26,14 +26,7 @@ const styles = {
         backgroundColor: "#565252",
         height: "100vh",
         overflow: "scroll",
-        position: 'relative',
-        '@media(max-width: 768px)': {
-            width: "100%"
-        },
-        '@media(max-width: 576px)': {
-            position: "fixed",
-            width: "80%",
-        }
+        position: 'relative'
     })
 };
 
