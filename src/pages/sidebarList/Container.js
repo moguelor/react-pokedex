@@ -32,7 +32,7 @@ class Container extends Component {
                     />
                 </div>
 
-                <Motion defaultStyle={{ x: 0 }} style={{ x: spring(isOpen ? 0 : -450, presets.noWobble) }}>
+                <Motion defaultStyle={{ x: -450 }} style={{ x: spring(isOpen ? 0 : -450, presets.noWobble) }}>
                     {
                         ({ x }) => <div className={styles.sidebarMobile} style={{ left: `${x}px` }}>
                             <Sidebar
@@ -43,7 +43,6 @@ class Container extends Component {
                             />
                         </div>
                     }
-
                 </Motion>
 
             </div>
