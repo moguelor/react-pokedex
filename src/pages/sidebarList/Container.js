@@ -65,7 +65,6 @@ const styles = {
     sidebarDesktop: css({
         display: "block",
         '@media(max-width: 576px)': {
-            zIndex: 999,
             display: "none",
             width: "80%",
         }
