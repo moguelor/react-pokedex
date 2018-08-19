@@ -24,7 +24,20 @@ export default function(state = INITIAL_STATE, action){
                 id : action.payload.id,
                 name : action.payload.name,
                 types : action.payload.types,
-                image : action.payload.sprites.front_default
+                image : action.payload.sprites.front_default,
+                weight : action.payload.weight,
+                height : action.payload.height,
+                stats : action.payload.stats.map((item) => {
+                    return {
+                        name : item.stat.name,
+                        base_stat : item.base_stat
+                    }
+                }),
+                abilities : action.payload.abilities.map((item) => {
+                    return {
+                        name : item.ability.name
+                    }
+                })
             }
         }})
 

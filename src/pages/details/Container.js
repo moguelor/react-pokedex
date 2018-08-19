@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { css } from 'glamor'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
-import { PokemonInfo } from './components'
+import { PokemonInfo, Stats, BottomDetails } from './components'
 import { Loading } from '../../common/components'
 import sidebarList from '../sidebarList'
 import * as actions from './actions'
@@ -44,7 +44,7 @@ class Container extends Component {
         }
 
         return (
-            <div className={`row ${styles.container} align-items-center`}>
+            <div className={`row ${styles.container} `}>
                 <div className="col-12">
                     <span className={`${styles.buttonPanel} fa fa-bars`} onClick={handleClickOpenSidebar} />
                 </div>
@@ -52,10 +52,14 @@ class Container extends Component {
                     <PokemonInfo pokemon={pokemon} />
                 </div>
                 <div className="col text-center ">
-                    Some details
+                   <Stats stats = {pokemon.stats}/>
                 </div>
-                <div className="col-12 text-center">
-                    Other details
+                <div className="col-12">
+                   <BottomDetails 
+                     abilities = {pokemon.abilities}
+                     weight = {pokemon.weight}
+                     height = {pokemon.height}
+                   />
                 </div>
             </div>
         )
@@ -79,6 +83,8 @@ const styles = {
         fontSize: 24,
         color: "#565252",
         display: "none",
+        marginTop: 20,
+        marginBottom: 20,
         '@media(max-width: 576px)': {
             display: "block"
         }
