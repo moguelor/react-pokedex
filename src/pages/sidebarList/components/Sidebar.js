@@ -25,7 +25,7 @@ const styles = {
         width: "100%",
         backgroundColor: "#565252",
         height: "100vh",
-        overflow: "scroll",
+        overflowY: "scroll",
         position: 'relative'
     })
 };

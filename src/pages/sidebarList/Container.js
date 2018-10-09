@@ -44,11 +44,8 @@ class Container extends Component {
                         </div>
                     }
                 </Motion>
-
             </div>
-
         )
-
     }
 }
 
