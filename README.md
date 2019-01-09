@@ -80,7 +80,8 @@ Technologies
 
 [react-router v4](https://github.com/ReactTraining/react-router) Routing
 
-Images:
+Preview
+===
 
 [See View Desktop](https://drive.google.com/open?id=1ol4B0X56jeOqCTz34qd11cI5RZ2b7_9-)
 
