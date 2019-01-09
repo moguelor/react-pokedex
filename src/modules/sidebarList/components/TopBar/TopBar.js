@@ -1,6 +1,6 @@
 import React from 'react'
 import {css} from 'glamor'
-import pokeballImage from '../../../../public/images/pokeball.png';
+import pokeballImage from 'resources/images/pokeball.png'
 
 const TopBar = () => (
     <div className={`text-center sticky-top ${styles.topBar}`}>

@@ -63,12 +63,21 @@ I use a feature pattern.
 Technologies
 ===
 [react-slignshot](https://github.com/coryhouse/react-slingshot) Starter kit for projects in react fully of good practices.
-[glamor]()
-[react-motion]()
-[redux-api-middleware]()
-[reselect]()
-[immutability-helper]()
-[bootstrap4]()
-[fontAwesome]()
+
+[glamor](https://github.com/threepointone/glamor) Css in JS.
+
+[react-motion](https://github.com/chenglou/react-motion) Animation.
+
+[redux-api-middleware](https://www.npmjs.com/package/redux-api-middleware) Dispatch api to easy.
+
+[reselect](https://github.com/reduxjs/reselect) Optimized getter for redux.
+
+[immutability-helper](https://github.com/kolodny/immutability-helper) Immutability.
+
+[bootstrap v4](https://getbootstrap.com/) Css Framework
+
+[font-awesome](https://fontawesome.com/) Icons
+
+[react-router v4](https://github.com/ReactTraining/react-router) Routing
 
 

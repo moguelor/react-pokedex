@@ -8,6 +8,10 @@ import path from 'path';
 
 const GLOBALS = {
   'process.env.NODE_ENV': JSON.stringify('production'),
+  alias: {
+    'resources': path.resolve(__dirname, '/public'),
+    'common-ui': path.resolve(__dirname, 'src/common/components'),
+  },
   __DEV__: false
 };
 

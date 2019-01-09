@@ -5,7 +5,7 @@ import createHistory from 'history/createBrowserHistory';
 // 'routerMiddleware': the new way of storing route changes with redux middleware since rrV4.
 import { routerMiddleware } from 'react-router-redux';
 import { apiMiddleware } from 'redux-api-middleware';
-import rootReducer from '../pages/main/reducer';
+import rootReducer from '../modules/main/reducer';
 export const history = createHistory();
 function configureStoreProd(initialState) {
   const reactRouterMiddleware = routerMiddleware(history);
@@ -48,8 +48,8 @@ function configureStoreDev(initialState) {
 
   if (module.hot) {
     // Enable Webpack hot module replacement for reducers
-    module.hot.accept('../pages/main/reducer', () => {
-      const nextReducer = require('../pages/main/reducer').default; // eslint-disable-line global-require
+    module.hot.accept('../modules/main/reducer', () => {
+      const nextReducer = require('../modules/main/reducer').default; // eslint-disable-line global-require
       store.replaceReducer(nextReducer);
     });
   }

@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { css } from 'glamor'
-import { Loading } from '../../../common/components'
-import PokemonList from './PokemonList'
-import TopBar from './TopBar'
+import { Loading } from 'common-ui'
+import PokemonList from '../PokemonList'
+import TopBar from '../TopBar'
 
 const Sidebar = ({ pokemons, isFetching, redirectToPokemon, activePokemonId}) => (
     <div className={styles.container}>

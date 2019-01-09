@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {css} from 'glamor'
-import PokemonListItem from './PokemonListItem'
+import PokemonListItem from '../PokemonListItem'
 
 const PokemonList = ({ pokemons, redirectToPokemon, activePokemonId }) => (
     <div className={`${styles.listItems}`}>
