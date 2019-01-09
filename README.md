@@ -82,6 +82,8 @@ Technologies
 
 Images:
 
-![View Desktop](https://drive.google.com/file/d/1ol4B0X56jeOqCTz34qd11cI5RZ2b7_9-/view?usp=sharing)
+[See View Desktop](https://drive.google.com/open?id=1ol4B0X56jeOqCTz34qd11cI5RZ2b7_9-)
+
+[See View Mobile](https://drive.google.com/open?id=138fNjOVzmrtEovhDiGrGuv1TdRBsf--b)
 
 
