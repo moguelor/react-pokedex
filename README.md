@@ -82,6 +82,6 @@ Technologies
 
 Images:
 
-![View Desktop](http://url/to/img.png)
+![View Desktop](https://drive.google.com/file/d/1ol4B0X56jeOqCTz34qd11cI5RZ2b7_9-/view?usp=sharing)
 
 
