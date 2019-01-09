@@ -9,7 +9,6 @@ import sidebarList from '../sidebarList'
 import * as actions from './actions'
 import * as selectors from './selectors'
 
-
 class Container extends Component {
 
     componentDidMount() {

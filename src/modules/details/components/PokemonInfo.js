@@ -11,9 +11,9 @@ const PokemonInfo = ({pokemon : {id, name, image, types }}) => (
             </div>
         </div>
         <div className="col-12">
-           <ListType 
-                types = {types}
-           />
+            <ListType 
+                    types = {types}
+            />
         </div>
         <div className="col-12">
             <span className={styles.namePokemon}> {name.toUpperCase()} </span><br />

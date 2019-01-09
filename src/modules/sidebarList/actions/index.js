@@ -3,7 +3,7 @@ import fetchPokemons from './fetchPokemons'
 import openPanel from './openPanel'
 import redirectToPokemon from './redirectToPokemon'
 
-export default {
+export {
     closePanel,
     fetchPokemons,
     openPanel,

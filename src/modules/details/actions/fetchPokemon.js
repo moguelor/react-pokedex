@@ -1,7 +1,8 @@
 import { CALL_API } from 'redux-api-middleware';
-import { FETCH_POKEMON, FETCH_POKEMON_SUCCESS, FETCH_POKEMON_FAILURE, SET_ACTIVE_POKEMON_ID } from './actionTypes';
+import { FETCH_POKEMON, FETCH_POKEMON_SUCCESS, FETCH_POKEMON_FAILURE } from '../actionTypes';
+import setActivePokemonId from './setActivePokemonId';
 
-export function fetchPokemon(id){
+export default function fetchPokemon(id){
     return (dispatch) => {
 
         dispatch(setActivePokemonId(id));
@@ -17,12 +18,5 @@ export function fetchPokemon(id){
             }
         })
 
-    }
-}
-
-export function setActivePokemonId(id){
-    return {
-        type : SET_ACTIVE_POKEMON_ID,
-        payload : id
     }
 }

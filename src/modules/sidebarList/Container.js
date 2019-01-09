@@ -6,7 +6,7 @@ import { css } from 'glamor'
 import { Sidebar } from './components'
 import { Motion, spring, presets } from 'react-motion'
 import details from '../details';
-import actions from './actions'
+import * as actions from './actions'
 import * as selectors from './selectors'
 
 

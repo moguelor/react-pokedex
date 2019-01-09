@@ -26,7 +26,7 @@ I use a feature pattern.
 ├── src                       # Source code
 │   ├── common                # Common code reusable.
 │       ├── components        # Reusable react components.
-├── pages                     # Each page of applicatión. Is commonly defined by the react/route path.
+├── modules                   # Each module of applicatión. Is commonly defined by the react/route path.
 │   ├── main                  # Main page.
 │       ├── components        # Page components.
 │           ├── index.js      # Point entry for expose all components by page.
